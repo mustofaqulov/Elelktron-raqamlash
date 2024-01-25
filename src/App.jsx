@@ -1,4 +1,5 @@
 import { OptionInput } from "./components/Inputs/Option-input/Option-input";
+import HomePage from "./pages/Home/HomePage"
 
 import "./styles/style.scss";
 function App() {

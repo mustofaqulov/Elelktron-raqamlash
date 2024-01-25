@@ -1,12 +1,13 @@
-import Login from "./components/Login/Login"
-function App() {
+// import Login from "./components/Login/Login";
+import HomePage from "./pages/Home/HomePage"
 
+function App() {
   return (
     <>
       <h1>Hello</h1>
-      <Login/>
+      <HomePage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

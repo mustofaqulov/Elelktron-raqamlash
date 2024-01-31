@@ -1,17 +1,18 @@
-import { OptionInput } from "./components/Inputs/Option-input/Option-input";
-import HomePage from "./pages/Home/HomePage"
+// import { OptionInput } from "./components/Inputs/Option-input/Option-input";
+import HomePage from "./pages/Home/HomePage";
+import "./styles/_base.scss";
 
-import "./styles/style.scss";
 function App() {
   return (
     <>
-      <OptionInput
+      <HomePage />
+      {/* <OptionInput
         placeholder="tuman..."
         label="Tuman"
         classInp="textInput"
         type="text"
         id="Қашқадарё_вилояти"
-      />
+      /> */}
     </>
   );
 }

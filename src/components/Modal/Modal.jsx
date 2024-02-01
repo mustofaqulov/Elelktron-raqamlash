@@ -1,6 +1,8 @@
 import { Button } from "../Button/button";
 import "./modal.scss";
+import PropTypes from "prop-types";
 import OpenIcon from "../../assets/icons/open.svg?react";
+import { Information } from "../../pages/InformationPage/Information";
 
 export function Modal({ open, onClose }) {
   if (!open) return null;
@@ -25,7 +27,11 @@ export function Modal({ open, onClose }) {
               <input autoComplete="off" id="email" type="password" />
             </div>
             <div className="login-btn">
-              <Button title="Tizimga kirish" icon={<OpenIcon />} />
+              <Button
+                onClick={<Information />}
+                title="Tizimga kirish"
+                icon={<OpenIcon />}
+              />
             </div>
           </div>
         </div>
@@ -33,3 +39,13 @@ export function Modal({ open, onClose }) {
     </>
   );
 }
+
+Modal.defaultProps = {
+  open: "",
+  onClose: "",
+};
+
+Modal.propTypes = {
+  open: PropTypes.func,
+  onClose: PropTypes.func,
+};

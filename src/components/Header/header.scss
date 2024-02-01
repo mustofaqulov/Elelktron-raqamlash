@@ -1,0 +1,28 @@
+nav{
+  padding: 32px 0px;
+  background-color:#183249;
+  .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header-logo{
+      display: flex;
+      align-items: center;
+      p{
+        margin-left: 44px;
+        color: white;
+        font-size: 32px;
+      }
+    }
+    .about-btn{
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+// @media only screen and (max-width: 1000px) {
+//   nav{
+//     background:red;
+//   }
+// }

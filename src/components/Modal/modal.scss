@@ -5,61 +5,77 @@
   background: rgba(49, 49, 49, 0);
   inset: 0;
 }
-.modal {
+.bg-modal {
+  width: 410px;
+  height: 410px;
+  position: absolute;
+  background: rgb(29, 181, 183);
+  background: linear-gradient(
+    0deg,
+    rgb(10, 109, 111) 0%,
+    rgba(24, 50, 73, 1) 94%
+  );
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  height: 400px;
-  background-color:#18324968;
-  position: absolute;
-  backdrop-filter: blur(20px);
-  border: 1px solid rgb(184, 184, 184);
   border-radius: 15px;
-  .close-content {
-    display: flex;
-    flex-direction: row-reverse;
-    .close {
-      cursor: pointer;
+
+  .modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background-color: #7a9b9f;
+    position: absolute;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 15px;
+    .close-content {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background-color: #162916;
-      border-radius: 0px 15px 0px 15px;
-      color: white;
-    }
-  }
-  .modal-login {
-    h2 {
-      text-align: center;
-    }
-    .content-box {
-      margin-top: 40px;
-      padding: 0px 40px;
-      display: flex;
-      flex-direction: column;
-      label{
-        color: #122012;
-        font-size: 20px;
-        font-weight: 700;
-      }
-      input {
-        border:none;
-        outline: none;
-        background:none;
-        padding: 10px 5px;
-        border-bottom: 2px solid white;
-        color: rgb(0, 0, 0);
-        letter-spacing: 1.2px;
-        font-size: 20px;
+      flex-direction: row-reverse;
+      .close {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: #162916;
+        border-radius: 0px 15px 0px 15px;
+        color: white;
       }
     }
-    .login-btn{
-      margin: 0 auto;
-      margin-top: 40px;
-      width: 200px;
+    .modal-login {
+      h2 {
+        text-align: center;
+      }
+      .content-box {
+        margin-top: 40px;
+        padding: 0px 40px;
+        display: flex;
+        flex-direction: column;
+        label {
+          color: #122012;
+          font-size: 20px;
+          font-weight: 700;
+        }
+        input {
+          border: none;
+          outline: none;
+          background: none;
+          padding: 10px 5px;
+          border-bottom: 2px solid white;
+          color: rgb(0, 0, 0);
+          letter-spacing: 1.2px;
+          font-size: 20px;
+        }
+      }
+      .login-btn {
+        margin: 0 auto;
+        margin-top: 40px;
+        width: 200px;
+      }
     }
   }
 }

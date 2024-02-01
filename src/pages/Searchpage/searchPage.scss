@@ -1,0 +1,27 @@
+body {
+  background-color: #f0f7fb;
+}
+.search-promo {
+  padding-top: 83px;
+  h1 {
+    font-size: 90px;
+    font-weight: 400;
+  }
+  .content-search {
+    margin-top: 60px;
+    display: flex;
+    justify-content: flex-end;
+    input {
+      width: 450px;
+      padding: 20px 32px;
+      border-radius: 28px;
+      border: 1px solid black;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    button {
+      background-color: black;
+      color: white;
+    }
+  }
+}

@@ -10,4 +10,10 @@ button{
   border-radius:48px;
   border:none;
   border:1px solid #183249;
+  transition: 0.2s ease all;
+}
+button:active{
+  transform: scale(0.98);
+  background-color: rgb(210, 210, 210);
+  border:1px solid black;
 }

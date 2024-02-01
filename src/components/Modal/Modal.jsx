@@ -27,11 +27,7 @@ export function Modal({ open, onClose }) {
               <input autoComplete="off" id="email" type="password" />
             </div>
             <div className="login-btn">
-              <Button
-                onClick={<Information />}
-                title="Tizimga kirish"
-                icon={<OpenIcon />}
-              />
+              <Button title="Tizimga kirish" icon={<OpenIcon />} />
             </div>
           </div>
         </div>

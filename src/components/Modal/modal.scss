@@ -11,7 +11,7 @@
   transform: translate(-50%, -50%);
   width: 400px;
   height: 400px;
-  background-color: translate;
+  background-color:#18324968;
   position: absolute;
   backdrop-filter: blur(20px);
   border: 1px solid rgb(184, 184, 184);
@@ -51,15 +51,15 @@
         background:none;
         padding: 10px 5px;
         border-bottom: 2px solid white;
-        color: white;
+        color: rgb(0, 0, 0);
         letter-spacing: 1.2px;
-        font-size: 18px;
+        font-size: 20px;
       }
     }
     .login-btn{
       margin: 0 auto;
       margin-top: 40px;
-      width: 100px;
+      width: 200px;
     }
   }
 }

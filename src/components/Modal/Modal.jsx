@@ -1,5 +1,6 @@
 import { Button } from "../Button/button";
 import "./modal.scss";
+import OpenIcon from "../../assets/icons/open.svg?react";
 
 export function Modal({ open, onClose }) {
   if (!open) return null;
@@ -23,7 +24,7 @@ export function Modal({ open, onClose }) {
             <input autoComplete="off" id="email" type="password" />
           </div>
           <div className="login-btn">
-            <Button title="Login" />
+            <Button title="Tizimga kirish" icon={<OpenIcon />} />
           </div>
         </div>
       </div>

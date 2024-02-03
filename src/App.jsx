@@ -1,16 +1,9 @@
-import { OptionInput } from "./components/Inputs/Option-input/Option-input";
-
+import { Radio } from "./components/Inputs/RadioInp/Radio";
 import "./styles/style.scss";
 function App() {
   return (
     <>
-      <OptionInput
-        placeholder="tuman..."
-        label="Tuman"
-        classInp="textInput"
-        type="text"
-        id="Қашқадарё_вилояти"
-      />
+      <Radio name="Yashash joyi" />
     </>
   );
 }

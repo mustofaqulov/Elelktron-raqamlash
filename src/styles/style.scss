@@ -1,5 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgb(112, 108, 108);
-  background-image: url(../assets/images/background.jpg);
+  background-image: url(../assets/images/ss-people-data.jpg);
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
 }

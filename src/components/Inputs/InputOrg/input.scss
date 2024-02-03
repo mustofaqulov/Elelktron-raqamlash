@@ -1,0 +1,26 @@
+.search {
+  width: 100%;
+  max-width: 1211px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  input {
+    color: white;
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    flex-grow: 1;
+    font-size: 20px;
+  }
+}
+label {
+  font-size: 21px;
+}
+label span {
+  color: #3570a4;
+}

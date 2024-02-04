@@ -3,6 +3,7 @@ import "./modal.scss";
 import PropTypes from "prop-types";
 import OpenIcon from "../../assets/icons/open.svg?react";
 import { Information } from "../../pages/InformationPage/Information";
+import { Link } from "react-router-dom";
 
 export function Modal({ open, onClose }) {
   if (!open) return null;
@@ -13,7 +14,7 @@ export function Modal({ open, onClose }) {
         <div className="modal">
           <div className="close-content">
             <div onClick={onClose} className="close">
-              <span class="material-symbols-outlined">close</span>
+              <span className="material-symbols-outlined">close</span>
             </div>
           </div>
           <div className="modal-login">
@@ -27,7 +28,9 @@ export function Modal({ open, onClose }) {
               <input autoComplete="off" id="email" type="password" />
             </div>
             <div className="login-btn">
-              <Button title="Tizimga kirish" icon={<OpenIcon />} />
+              <Link to={<Information />}>
+                <Button title="Tizimga kirish" icon={<OpenIcon />} />
+              </Link>
             </div>
           </div>
         </div>

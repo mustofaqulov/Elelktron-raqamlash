@@ -1,19 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  ::-webkit-scrollbar {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(112, 108, 108);
+  background-image: url(../assets/images/ss-people-data.jpg);
+
+  &::-webkit-scrollbar{
     display: none;
   }
-
-}
-
-
-img {
-  display: block;
-}
-
-a {
-  color: inherit;
-  outline: none;
-}
-button {
-  cursor: pointer;
 }

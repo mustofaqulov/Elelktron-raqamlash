@@ -14,7 +14,8 @@ export function LoginPage() {
           <h1>Elektron raqamlashtirish portaliga hush kelibsiz!</h1>
           <p>Hisob raqamga kirish</p>
           <div className="registration">
-            <InputOrg />
+            <InputOrg type={"text"} name={"Login"} />
+            <InputOrg type={"password"} name={"Parol"} />
             <Button btnClass="primary" text={"Kirish"} />
           </div>
         </div>

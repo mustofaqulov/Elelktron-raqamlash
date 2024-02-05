@@ -1,0 +1,30 @@
+.search {
+  width: 100%;
+  border: 1px solid #252c3f;
+  border-radius: 8px;
+  padding: 13px 0;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  input {
+    color: rgb(169, 71, 71);
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    flex-grow: 1;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-dark-black);
+    margin: 0 10px;
+  }
+}
+label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--color-dark-gray);
+}
+label span {
+  color: #3570a4;
+}

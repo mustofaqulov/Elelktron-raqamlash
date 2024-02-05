@@ -1,11 +1,9 @@
-import { Button } from "./components/Button/Button";
-import AddIcon from "./assets/icon/user-add.svg?react";
-import "./styles/_base.scss";
+import { InputOrg } from "./components/Inputs/InputOrg/InputOrg";
 
 function App() {
   return (
     <>
-      <Button className="box" text={"Fuqoro qo’shish"} icons={<AddIcon />} />
+      <InputOrg name="Login" />
     </>
   );
 }

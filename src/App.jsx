@@ -1,7 +1,9 @@
+import { InputOrg } from "./components/Inputs/InputOrg/InputOrg";
+
 function App() {
   return (
     <>
-    <h1>Hello</h1>
+      <InputOrg />
     </>
   );
 }

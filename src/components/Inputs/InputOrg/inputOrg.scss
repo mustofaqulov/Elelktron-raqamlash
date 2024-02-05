@@ -1,21 +1,25 @@
 .search {
   width: 100%;
-  max-width: 1211px;
-  border-radius: 10px;
+  border: 1px solid #252c3f;
+  border-radius: 8px;
+  padding: 13px 24px;
   margin-bottom: 30px;
-  border: 1px solid #cccccc;
-  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 15px;
   input {
-    color: white;
+    color: rgb(169, 71, 71);
     outline: none;
     background-color: transparent;
     border: 0;
     flex-grow: 1;
-    font-size: 20px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--color-dark-black);
   }
 }
 label {

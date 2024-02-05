@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import "./input.scss";
+import "./inputOrg.scss";
 
-export const Input = ({ value, setValue, placeholder, name }) => {
+export const InputOrg = ({ value, setValue, placeholder, name }) => {
   return (
     <>
       <label htmlFor={value}>
@@ -11,7 +11,6 @@ export const Input = ({ value, setValue, placeholder, name }) => {
       <div className="search">
         <input
           type="text"
-          value={value}
           id={value}
           placeholder={placeholder}
           onChange={(e) => {
@@ -23,14 +22,14 @@ export const Input = ({ value, setValue, placeholder, name }) => {
   );
 };
 
-Input.propTypes = {
+InputOrg.propTypes = {
   value: PropTypes.string,
   setValue: PropTypes.func,
   name: PropTypes.string,
   placeholder: PropTypes.string,
 };
 
-Input.defaultProps = {
+InputOrg.defaultProps = {
   value: "",
   setValue: () => {},
   placeholder: "",

@@ -1,7 +1,11 @@
+import { Button } from "./components/Button/Button";
+import AddIcon from "./assets/icon/user-add.svg?react";
+import "./styles/_base.scss";
+
 function App() {
   return (
     <>
-    <h1>Hello</h1>
+      <Button className="box" text={"Fuqoro qo’shish"} icons={<AddIcon />} />
     </>
   );
 }

@@ -1,0 +1,13 @@
+button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-blue);
+  border: none;
+  color: var(--color-white);
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: var(--font-size-lg);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+}

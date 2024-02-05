@@ -1,9 +1,10 @@
-import { InputOrg } from "./components/Inputs/InputOrg/InputOrg";
+import { LoginPage } from "./Pages/LoginPage/LoginPage";
+import "./styles/_base.scss";
 
 function App() {
   return (
     <>
-      <InputOrg name="Login" />
+      <LoginPage />
     </>
   );
 }

@@ -1,4 +1,11 @@
 button {
+  transition: 0.2s ease all;
+}
+button:active {
+  background-color: rgb(54, 136, 198);
+  transform: scale(0.99);
+}
+.secondary {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -10,4 +17,16 @@ button {
   font-size: var(--font-size-lg);
   font-weight: var(--fw-bold);
   cursor: pointer;
+}
+
+.primary {
+  margin-top: 40px;
+  padding: 13px 201px;
+  border-radius: 8px;
+  font-size: var(--font-size-lg);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  background-color: var(--color-blue);
+  border: none;
+  color: var(--color-white);
 }

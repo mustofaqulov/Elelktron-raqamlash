@@ -1,38 +1,25 @@
 import PropTypes from "prop-types";
 import "./input.scss";
 
-export const Input = ({ value, setValue, placeholder, name }) => {
+export const InputOrg = ({ value, placeholder, name }) => {
   return (
     <>
-      <label htmlFor={value}>
-        {name}
-        <span>*</span>
-      </label>
+      <label htmlFor={value}>{name}</label>
       <div className="search">
-        <input
-          type="text"
-          value={value}
-          id={value}
-          placeholder={placeholder}
-          onChange={(e) => {
-            setValue(e.target.value);
-          }}
-        />
+        <input type="text" id={value} placeholder={placeholder} />
       </div>
     </>
   );
 };
 
-Input.propTypes = {
+InputOrg.propTypes = {
   value: PropTypes.string,
-  setValue: PropTypes.func,
   name: PropTypes.string,
   placeholder: PropTypes.string,
 };
 
-Input.defaultProps = {
+InputOrg.defaultProps = {
   value: "",
-  setValue: () => {},
   placeholder: "",
   name: "",
 };

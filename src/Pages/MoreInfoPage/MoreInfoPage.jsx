@@ -7,7 +7,7 @@ export function MoreInfoPage() {
   return (
     <div>
       <Information
-        add={true}
+        add={false}
         btn={
           <Button
             btnClass={"secondary"}

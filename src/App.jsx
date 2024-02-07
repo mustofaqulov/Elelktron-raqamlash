@@ -1,9 +1,9 @@
 import "./styles/_base.scss";
-import { EdituserPage } from "./Pages/Edituserpage/EdituserPage";
+import { MoreInfoPage } from "./Pages/MoreInfoPage/MoreInfoPage";
 function App() {
   return (
     <>
-      <EdituserPage />
+      <MoreInfoPage />
     </>
   );
 }

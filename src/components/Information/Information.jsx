@@ -11,28 +11,33 @@ export function Information({ add, btn, btnError }) {
       name: "F.I.Sh",
       placeholder: "Xasan Asqarov Sobir O'gli",
       Only: add,
+      type: "text",
       id: 1,
     },
     {
       name: "Viloyat",
       placeholder: "Qashqadaryo",
       Only: add,
+      type: "text",
       id: 2,
     },
     {
       name: "Tuman",
       placeholder: "Qarshi",
+      type: "text",
       Only: add,
       id: 3,
     },
     {
       name: "Mahalla",
+      type: "text",
       placeholder: "Qarshi",
       Only: add,
       id: 4,
     },
     {
       name: "Xonodon kodi",
+      type: "text",
       placeholder: "AA 85040703",
       Only: add,
       id: 5,
@@ -41,6 +46,7 @@ export function Information({ add, btn, btnError }) {
   const data = [
     {
       name: "Telefon raqami",
+      type: "number",
       placeholder: "+998 99 999 99 99",
       Only: add,
       id: 1,
@@ -48,6 +54,7 @@ export function Information({ add, btn, btnError }) {
     {
       name: "Chet davlatda",
       placeholder: 0,
+      type: "number",
       Only: add,
       id: 2,
     },
@@ -55,17 +62,20 @@ export function Information({ add, btn, btnError }) {
       name: "Uy manzili",
       placeholder: "https/...",
       Only: add,
+      type: "text",
       id: 3,
     },
     {
       name: "Uy raqami",
       placeholder: "12",
+      type: "number",
       Only: add,
       id: 4,
     },
     {
       name: "Xonodon kodi",
       placeholder: "249 45454545",
+      type: "text",
       Only: add,
       id: 5,
     },
@@ -83,7 +93,7 @@ export function Information({ add, btn, btnError }) {
           </div>
           <div className="wrapper">
             <div className="info-content">
-              {Infodata.map(({ placeholder, Only, id, name }) => {
+              {Infodata.map(({ placeholder, Only, id, name, type }) => {
                 return (
                   <>
                     <InputOrg
@@ -91,19 +101,21 @@ export function Information({ add, btn, btnError }) {
                       placeholder={placeholder}
                       readOnly={Only}
                       name={name}
+                      type={type}
                     />
                   </>
                 );
               })}
             </div>
             <div className="info-content">
-              {data.map(({ placeholder, Only, id, name }) => {
+              {data.map(({ placeholder, Only, id, name, type }) => {
                 return (
                   <>
                     <InputOrg
                       key={id}
                       placeholder={placeholder}
                       readOnly={Only}
+                      type={type}
                       name={name}
                     />
                   </>

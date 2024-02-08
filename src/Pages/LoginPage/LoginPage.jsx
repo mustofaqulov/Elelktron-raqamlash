@@ -2,7 +2,7 @@ import "./LoginPage.scss";
 import GerbIcon from "../../assets/icon/gerb.svg?react";
 import { Button } from "../../components/Button/Button";
 import { InputOrg } from "../../components/Inputs/InputOrg/Input";
-
+import { NavLink } from "react-router-dom";
 export function LoginPage() {
   return (
     <>
@@ -16,7 +16,9 @@ export function LoginPage() {
           <div className="registration">
             <InputOrg type={"text"} name={"Login"} />
             <InputOrg type={"password"} name={"Parol"} />
+            <NavLink to={"/moreinfo"}>
             <Button btnClass="primary" text={"Kirish"} />
+            </NavLink>
           </div>
         </div>
       </div>

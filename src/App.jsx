@@ -1,11 +1,10 @@
-import "./styles/_base.scss";
-import { MoreInfoPage } from "./Pages/MoreInfoPage/MoreInfoPage";
-function App() {
+import { Layout } from "./layout/Layout";
+import { Router } from "./routes/Router";
+
+export default function App() {
   return (
-    <>
-      <MoreInfoPage />
-    </>
+    <Layout>
+      <Router />
+    </Layout>
   );
 }
-
-export default App;

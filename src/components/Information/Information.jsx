@@ -1,11 +1,9 @@
 import { Header } from "../Header/Header";
-import { Button } from "../Button/Button";
 import PropTypes from "prop-types";
 import { InputOrg } from "../Inputs/InputOrg/Input";
-import ArrowIcon from "../../assets/icon/back-arrow.svg?react";
 import "./information.scss";
 
-export function Information({ add, btn, btnError }) {
+export function Information({ add, btn, btnError, main, back }) {
   const Infodata = [
     {
       name: "F.I.Sh",
@@ -86,10 +84,9 @@ export function Information({ add, btn, btnError }) {
         <Header />
         <div className="inforamtion">
           <div className="special">
-            <h2>
-              ID <span>299-45454545</span>
-            </h2>
-            <Button btnClass={"border"} text={"Ortga"} icons={<ArrowIcon />} />
+            <h2>{main}</h2>
+            {back}
+            {/* <Button btnClass={"border"} text={"Ortga"} icons={<ArrowIcon />} /> */}
           </div>
           <div className="wrapper">
             <div className="info-content">

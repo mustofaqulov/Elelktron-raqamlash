@@ -3,6 +3,7 @@ import "./button.scss";
 import classNames from "classnames";
 
 export function Button({ icons, text, styleBtn, btnClass, type }) {
+
   const buttonClass = classNames("btn", {
     ["primary"]: btnClass === "primary",
     ["secondary"]: btnClass === "secondary",
@@ -13,7 +14,12 @@ export function Button({ icons, text, styleBtn, btnClass, type }) {
   });
   return (
     <>
-      <button type={type} className={buttonClass} style={styleBtn}>
+
+      <button
+        type={type}
+        className={buttonClass}
+        style={styleBtn}
+      >
         {icons} {text}
       </button>
     </>

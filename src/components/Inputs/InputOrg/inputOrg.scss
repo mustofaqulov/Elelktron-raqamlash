@@ -3,6 +3,7 @@
   border: 1px solid #252c3f;
   border-radius: 8px;
   padding: 13px 0;
+  padding-right: 10px;
   display: flex;
   align-items: center;
   margin-top: 5px;
@@ -17,6 +18,14 @@
     line-height: 140%;
     color: var(--color-dark-black);
     margin: 0 10px;
+  }
+
+  svg {
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      transform: rotate(30deg) scale(1.1);
+    }
   }
 }
 label {

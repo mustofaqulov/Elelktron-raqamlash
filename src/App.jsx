@@ -1,11 +1,11 @@
-import { LoginPage } from "./Pages/LoginPage/LoginPage";
-import { Region } from "./components/Inputs/regions";
+import { SearchPage } from "./pages/Search/SearchPage";
+
 import "./styles/_base.scss";
 
 function App() {
   return (
     <>
-      <LoginPage />
+      <SearchPage />
     </>
   );
 }

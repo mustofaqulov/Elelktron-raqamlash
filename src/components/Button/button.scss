@@ -1,14 +1,13 @@
 button {
-  transition: 0.2s ease all;
+  transition: 0.3s ease all;
 }
 button:active {
-  background-color: rgb(54, 136, 198);
-  transform: scale(0.99);
+  transform: scale(0.98);
 }
 .secondary {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
   background-color: var(--color-blue);
   border: none;
   color: var(--color-white);
@@ -16,7 +15,23 @@ button:active {
   border-radius: 8px;
   font-size: var(--font-size-lg);
   font-weight: var(--fw-bold);
+  border: 1px solid transparent;
   cursor: pointer;
+
+  svg {
+    fill: white;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+    background-color: transparent;
+    svg {
+      fill: var(--color-blue);
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .primary {

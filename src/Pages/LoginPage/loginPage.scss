@@ -29,6 +29,19 @@
       width: 100%;
       max-width: 446px;
       margin: 0 auto;
+      .show-content {
+        padding-top: 11px;
+        padding-left: 15px;
+        height: 43px;
+        width: 60px;
+        position: relative;
+        background-color: #fff;
+        left: 85%;
+        top: -74px;
+        .show {
+          cursor: pointer;
+        }
+      }
     }
   }
 }

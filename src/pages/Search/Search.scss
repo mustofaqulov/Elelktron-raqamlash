@@ -36,6 +36,10 @@
     border: 1px solid rgba(219, 223, 234, 0.5);
     border-radius: 12px;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
     table {
       width: 100%;
       border-collapse: collapse;
@@ -54,12 +58,13 @@
         }
       }
       tbody {
+        width: 100%;
         tr {
           td {
             padding: 15px 0;
             font-family: var(--font-family);
             font-weight: 500;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 140%;
             color: var(--color-dark-black);
             border-bottom: 1px solid rgba(219, 223, 234, 0.5);
@@ -67,9 +72,25 @@
           .blue {
             color: var(--color-blue);
           }
-          button {
-            margin-right: -55px;
-          }
+        }
+      }
+    }
+    .pagination {
+      margin: 0 auto;
+      margin: 30px 0;
+      margin-right: 50px;
+
+      button {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        margin-right: 10px;
+
+        svg {
+          width: 40px;
+          height: 40px;
         }
       }
     }

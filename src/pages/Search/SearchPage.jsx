@@ -1,8 +1,9 @@
 import * as React from "react";
 import { Header } from "../../components/Header/Header";
 import { Button } from "../../components/Button/Button";
+import { Link } from "react-router-dom";
 import { InputOrg } from "../../components/Inputs/InputOrg/InputOrg";
-import TablePagination from "@mui/material/TablePagination";
+// import TablePagination from "@mui/material/TablePagination";
 import Plus from "../../assets/icon/user-add.svg?react";
 import Search from "../../assets/icon/search.svg?react";
 
@@ -256,24 +257,26 @@ export function SearchPage() {
   const [page, setPage] = React.useState(2);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
+  // const handleChangePage = (event, newPage) => {
+  //   setPage(newPage);
+  // };
 
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
+  // const handleChangeRowsPerPage = (event) => {
+  //   setRowsPerPage(parseInt(event.target.value, 10));
+  //   setPage(0);
+  // };
 
   return (
     <>
       <Header
         user={
-          <Button
-            btnClass="secondary"
-            text="Fuqaro qo'shish"
-            icons={<Plus />}
-          />
+          <Link to={"/adduser"}>
+            <Button
+              btnClass="secondary"
+              text="Fuqaro qo'shish"
+              icons={<Plus />}
+            />
+          </Link>
         }
       />
       <div className="search-page container">
@@ -294,14 +297,18 @@ export function SearchPage() {
           </div>
         </div>
         <div className="divisions">
-          <TablePagination
-            component="div"
-            count={100}
-            page={page}
-            onPageChange={handleChangePage}
-            rowsPerPage={rowsPerPage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-          />
+          {divisions.map((item, index) => {
+            <div className="division" key={index}>
+              <p>{item.id}</p>
+              <p>{item.fuqaro}</p>
+              <p>{item.phone}</p>
+              <p>{item.address}</p>
+              <p>{item.kadastr}</p>
+              <p>{item.oila}</p>
+              <p>{item.chet}</p>
+              <p>{item.uy}</p>
+            </div>;
+          })}
         </div>
       </div>
     </>

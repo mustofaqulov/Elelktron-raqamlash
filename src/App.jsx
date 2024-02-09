@@ -1,13 +1,10 @@
-import { SearchPage } from "./pages/Search/SearchPage";
+import { Layout } from "./layout/Layout";
+import { Router } from "./routes/Router";
 
-import "./styles/_base.scss";
-
-function App() {
+export default function App() {
   return (
-    <>
-      <SearchPage />
-    </>
+    <Layout>
+      <Router />
+    </Layout>
   );
 }
-
-export default App;

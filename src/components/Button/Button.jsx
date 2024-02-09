@@ -3,14 +3,24 @@ import "./button.scss";
 import classNames from "classnames";
 
 export function Button({ icons, text, styleBtn, btnClass, type }) {
+
   const buttonClass = classNames("btn", {
     ["primary"]: btnClass === "primary",
     ["secondary"]: btnClass === "secondary",
+    ["error"]: btnClass === "error",
+    ["delete"]: btnClass === "delete",
+    ["gray"]: btnClass === "gray",
+    ["border"]: btnClass === "border",
   });
   return (
     <>
-      <button type={type} className={buttonClass} style={styleBtn}>
-        {text} {icons}
+
+      <button
+        type={type}
+        className={buttonClass}
+        style={styleBtn}
+      >
+        {icons} {text}
       </button>
     </>
   );

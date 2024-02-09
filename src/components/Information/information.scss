@@ -1,0 +1,40 @@
+.inforamtion {
+  margin: 0 auto;
+  margin-top: 75px;
+  padding: 40px;
+  width: 1200px;
+  background-color: white;
+  .special {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+      font-weight: --fw-medium;
+      font-size: 28px;
+      color: var(--color-blue);
+      line-height: 33.6px;
+      letter-spacing: -0.84px;
+      span {
+        color: var(--color-dark-black);
+      }
+    }
+  }
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .info-content {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+  }
+  .sort {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+}

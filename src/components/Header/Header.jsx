@@ -6,7 +6,7 @@ export function Header({ user }) {
   return (
     <>
       <div className="container">
-        <div className="navigatoin">
+        <div className="navigation">
           <div className="logo">
             <LogoIcon />
           </div>
@@ -16,7 +16,6 @@ export function Header({ user }) {
     </>
   );
 }
-
 
 Header.defaultProps = {
   user: null,

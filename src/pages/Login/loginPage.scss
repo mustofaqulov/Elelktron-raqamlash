@@ -30,15 +30,21 @@
       max-width: 446px;
       margin: 0 auto;
       .show-content {
-        padding-top: 11px;
-        padding-left: 15px;
-        height: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // margin-top: 5px;
+        // padding-top: 11px;
+        // padding-left: 15px;
+        height: 48px;
         width: 60px;
         position: relative;
-        background-color: #fff;
+        background-color: white;
         left: 85%;
-        top: -74px;
+        top: -49px;
         .show {
+          height: 24px;
+          display: block;
           cursor: pointer;
         }
       }

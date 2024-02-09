@@ -1005,7 +1005,9 @@ export function SearchPage() {
                     <td>{division.chet}</td>
                     <td>{division.uy}</td>
                     <td>
-                      <Button btnClass="secondary" text="Batafsil" />
+                      <Link to={"/moreinfo"}>
+                        <Button btnClass="secondary" text="Batafsil" />
+                      </Link>
                     </td>
                   </tr>
                 ))}

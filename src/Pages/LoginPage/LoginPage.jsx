@@ -1,9 +1,15 @@
 import "./LoginPage.scss";
 import GerbIcon from "../../assets/icon/gerb.svg?react";
+import EyeIcon from "../../assets/icon/eye.svg?react";
 import { Button } from "../../components/Button/Button";
 import { InputOrg } from "../../components/Inputs/InputOrg/Input";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 export function LoginPage() {
+  const [show, setShow] = useState(false);
+  const handleshow = () => {
+    setShow(!show);
+  };
   return (
     <>
       <div className="login-page">
@@ -15,9 +21,14 @@ export function LoginPage() {
           <p>Hisob raqamga kirish</p>
           <div className="registration">
             <InputOrg type={"text"} name={"Login"} />
-            <InputOrg type={"password"} name={"Parol"} />
+            <InputOrg type={show ? "text" : "password"} name={"Parol"} />
+            <div className="show-content">
+              <label onClick={handleshow} className="show">
+                {<EyeIcon />}
+              </label>
+            </div>
             <NavLink to={"/moreinfo"}>
-            <Button btnClass="primary" text={"Kirish"} />
+              <Button btnClass="primary" text={"Kirish"} />
             </NavLink>
           </div>
         </div>

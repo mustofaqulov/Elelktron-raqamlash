@@ -14,7 +14,11 @@ export function AdduserPage() {
         }
         main={"Fuqoro qo’shish"}
         add={false}
-        btn={<Button btnClass={"secondary"} text={"Saqlash"} />}
+        btn={
+          <Link to={"/search"}>
+            <Button btnClass={"secondary"} text={"Saqlash"} />
+          </Link>
+        }
       />
     </div>
   );

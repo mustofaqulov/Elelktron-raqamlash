@@ -22,5 +22,5 @@ Header.defaultProps = {
 };
 
 Header.propTypes = {
-  user: PropTypes.object,
+  user: PropTypes.node,
 };

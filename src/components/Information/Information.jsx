@@ -1,6 +1,6 @@
 import { Header } from "../Header/Header";
 import PropTypes from "prop-types";
-import { InputOrg } from "../Inputs/InputOrg/Input";
+import { InputOrg } from "../Inputs/InputOrg/InputOrg";
 import "./information.scss";
 
 export function Information({ add, btn, btnError, main, back }) {
@@ -133,10 +133,14 @@ Information.defaultProps = {
   add: null,
   btn: null,
   btnError: null,
+  main: null,
+  back: null,
 };
 
 Information.propTypes = {
   add: PropTypes.bool,
   btn: PropTypes.object,
   btnError: PropTypes.bool,
+  main: PropTypes.string,
+  back: PropTypes.node,
 };

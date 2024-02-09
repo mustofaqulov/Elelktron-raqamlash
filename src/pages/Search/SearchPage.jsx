@@ -1,15 +1,18 @@
 import * as React from "react";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
 import { Header } from "../../components/Header/Header";
 import { Button } from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import { InputOrg } from "../../components/Inputs/InputOrg/InputOrg";
-// import TablePagination from "@mui/material/TablePagination";
 import Plus from "../../assets/icon/user-add.svg?react";
 import Search from "../../assets/icon/search.svg?react";
 
 import "./Search.scss";
 
 export function SearchPage() {
+  const [page, stePage] = React.useState(1);
+
   const data = [
     "#id",
     "Fuqaro",
@@ -252,19 +255,702 @@ export function SearchPage() {
       chet: "0",
       uy: "5",
     },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
+    {
+      id: "299-454545",
+      fuqaro: "Abu Bin Ishtiyak",
+      phone: "+811 847-4958",
+      address: "Uzbekiston mahallasi",
+      kadastr: "Bor",
+      oila: "5",
+      chet: "0",
+      uy: "5",
+    },
   ];
 
-  const [page, setPage] = React.useState(2);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
-
-  // const handleChangePage = (event, newPage) => {
-  //   setPage(newPage);
-  // };
-
-  // const handleChangeRowsPerPage = (event) => {
-  //   setRowsPerPage(parseInt(event.target.value, 10));
-  //   setPage(0);
-  // };
+  let handleChange = (e, p) => {
+    console.log(e, p);
+    stePage(p);
+  };
 
   return (
     <>
@@ -297,18 +983,43 @@ export function SearchPage() {
           </div>
         </div>
         <div className="divisions">
-          {divisions.map((item, index) => {
-            <div className="division" key={index}>
-              <p>{item.id}</p>
-              <p>{item.fuqaro}</p>
-              <p>{item.phone}</p>
-              <p>{item.address}</p>
-              <p>{item.kadastr}</p>
-              <p>{item.oila}</p>
-              <p>{item.chet}</p>
-              <p>{item.uy}</p>
-            </div>;
-          })}
+          <table>
+            <thead>
+              <tr className="tr">
+                {data.map((i, ind) => (
+                  <th key={ind}>{i}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {divisions
+                .slice((page - 1) * 10, page * 10)
+                .map((division, index) => (
+                  <tr key={index}>
+                    <td>{division.id}</td>
+                    <td>{division.fuqaro}</td>
+                    <td>{division.phone}</td>
+                    <td>{division.address}</td>
+                    <td>{division.kadastr}</td>
+                    <td>{division.oila}</td>
+                    <td>{division.chet}</td>
+                    <td>{division.uy}</td>
+                    <td>
+                      <Button btnClass="secondary" text="Batafsil" />
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+          <div className="pagination">
+            <Stack spacing={2}>
+              <Pagination
+                count={Math.ceil(divisions.length / 10)}
+                color="primary"
+                onChange={handleChange}
+              />
+            </Stack>
+          </div>
         </div>
       </div>
     </>

@@ -5,7 +5,7 @@ import { Header } from "../../components/Header/Header";
 import { Button } from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import { InputOrg } from "../../components/Inputs/InputOrg/InputOrg";
-import Plus from "../../assets/icon/user-add.svg?react";
+import Plus from "../../assets/icon/add.svg?react";
 import Search from "../../assets/icon/search.svg?react";
 
 import "./Search.scss";

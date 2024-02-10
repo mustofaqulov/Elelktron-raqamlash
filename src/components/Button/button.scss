@@ -1,10 +1,9 @@
 button {
+  column-gap: 9px;
   display: flex;
   transition: 0.3s ease all;
 }
-button:active {
-  // transform: scale(0.98);
-}
+
 .secondary {
   gap: 15px;
   background-color: var(--color-blue);

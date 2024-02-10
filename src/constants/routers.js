@@ -1,5 +1,5 @@
 export const routePaths = {
-  LOGIN: "/login" || "/",
+  LOGIN: "/",
   ADDUSER: "/adduser",
   EDITUSER: "/edituser",
   MOREINFO: "/moreinfo",

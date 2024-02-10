@@ -28,13 +28,14 @@ export function MoreInfoPage() {
         }
       />
       <Information
+        time={"Yaratilgan: 06 Fev, 2019 01:42 PM"}
         back={
           <Link to={"/search"}>
             <Button btnClass={"border"} text={"Ortga"} icons={<ArrowIcon />} />
           </Link>
         }
         main={"ID 299-45454545"}
-        add={false}
+        add={true}
         btn={
           <Link to={"/edituser"}>
             <Button

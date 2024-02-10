@@ -21,7 +21,9 @@ export function LoginPage() {
           <h1>Elektron raqamlashtirish portaliga hush kelibsiz!</h1>
           <p>Hisob raqamga kirish</p>
           <div className="registration">
-            <InputOrg type={"text"} name={"Login"} />
+            <div className="login">
+              <InputOrg type={"text"} name={"Login"} />
+            </div>
             <InputOrg type={show ? "text" : "password"} name={"Parol"} />
             <div className="show-content">
               <label className="show">{<EyeIcon onClick={handleshow} />}</label>

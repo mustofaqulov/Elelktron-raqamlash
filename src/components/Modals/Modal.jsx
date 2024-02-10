@@ -1,11 +1,16 @@
 import PropTypes from "prop-types";
+import { useEffect } from "react";
 import "./modal.scss";
 
 export function Modal({ open, onClose, change, notchange, title, text }) {
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "auto";
+  }, [open]);
+
   if (!open) return null;
+
   return (
-    <div>
-      <div onClick={onClose} className="overlay"></div>
+    <div onClick={onClose} className="overlay">
       <div className="modal">
         <h3> {title}</h3>
         <p>{text}</p>

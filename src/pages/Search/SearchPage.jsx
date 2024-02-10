@@ -973,9 +973,9 @@ export function SearchPage() {
             <InputOrg
               type={"text"}
               style={{
-                border: "none",
-                borderBottom: "1px solid #cccccc",
-                borderRadius: "0",
+                border: "1px solid #eff9ff",
+                background: "#ECF8F9",
+                boxShadow: "0px 0px 40px 0.2px #43434331",
               }}
               placeholder={"Izlash"}
               icon={<Search />}

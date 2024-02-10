@@ -7,7 +7,7 @@ import {
   MoreInfoPage,
   SearchPage,
   LoginPage,
-} from "../Pages";
+} from "../pages";
 
 export function Router() {
   const { LOGIN, ADDUSER, EDITUSER, MOREINFO, SEARCH } = routePaths;
@@ -18,6 +18,7 @@ export function Router() {
       <Route path={EDITUSER} element={<EdituserPage />} />
       <Route path={MOREINFO} element={<MoreInfoPage />} />
       <Route path={SEARCH} element={<SearchPage />} />
+      <Route path="/login" element={<LoginPage />}></Route>
     </Routes>
   );
 }

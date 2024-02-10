@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import "./inputOrg.scss";
 
-export const InputOrg = ({ value, placeholder, name, style, icon, type }) => {
+export const InputOrg = ({readOnly, value, placeholder, name, style, icon, type }) => {
   return (
     <>
       <label htmlFor={value}>{name}</label>
       <div className="search" style={style}>
-        <input type={type} id={value} placeholder={placeholder} />
+        <input readOnly={readOnly} type={type} id={value} placeholder={placeholder} />
         {icon}
       </div>
     </>

@@ -18,7 +18,11 @@ export function EdituserPage() {
         open={isOpen}
         onClose={() => setOpen(false)}
         change={<Button btnClass={"gray"} text={"Yoq, Ortga."} />}
-        notchange={<Button btnClass={"secondary"} text={"Ha, Saqlash !"} />}
+        notchange={
+          <Link to={"/moreinfo"}>
+            <Button btnClass={"secondary"} text={"Ha, Saqlash !"} />
+          </Link>
+        }
       />
       <Information
         back={
@@ -30,7 +34,9 @@ export function EdituserPage() {
         add={false}
         btn={
           <div onClick={() => setOpen(true)}>
+            {/* <Link to={"/moreinfo"}> */}
             <Button btnClass={"secondary"} text={"Saqlash"} />
+            {/* </Link> */}
           </div>
         }
       />

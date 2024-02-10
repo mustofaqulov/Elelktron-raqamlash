@@ -10,7 +10,9 @@ export function Modal({ open, onClose, change, notchange, title, text }) {
         <h3> {title}</h3>
         <p>{text}</p>
         <div className="modal-btn">
-          {change}
+          <div onClick={onClose} className="close">
+            {change}
+          </div>
           {notchange}
         </div>
       </div>

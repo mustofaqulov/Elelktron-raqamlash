@@ -3,7 +3,7 @@ import DistrictsJson from "../../JSON/districts.json";
 import VillageJson from "../../JSON/village.json";
 import { useState, useEffect } from "react";
 import { PropTypes } from "prop-types";
-import { Dropdown } from "../Inputs/Dropdown/DropDown";
+import { Dropdown } from "./Dropdown/DropDown";
 
 import "./regions.scss";
 

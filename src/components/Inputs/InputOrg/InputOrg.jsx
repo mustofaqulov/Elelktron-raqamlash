@@ -1,12 +1,25 @@
 import PropTypes from "prop-types";
 import "./inputOrg.scss";
 
-export const InputOrg = ({readOnly, value, placeholder, name, style, icon, type }) => {
+export const InputOrg = ({
+  readOnly,
+  value,
+  placeholder,
+  name,
+  style,
+  icon,
+  type,
+}) => {
   return (
     <>
       <label htmlFor={value}>{name}</label>
       <div className="search" style={style}>
-        <input readOnly={readOnly} type={type} id={value} placeholder={placeholder} />
+        <input
+          readOnly={readOnly}
+          type={type}
+          id={value}
+          placeholder={placeholder}
+        />
         {icon}
       </div>
     </>
@@ -19,6 +32,7 @@ InputOrg.propTypes = {
   placeholder: PropTypes.string,
   style: PropTypes.object,
   icon: PropTypes.node,
+  readOnly: PropTypes.node,
   type: PropTypes.string,
 };
 
@@ -29,4 +43,5 @@ InputOrg.defaultProps = {
   type: "",
   style: {},
   icon: null,
+  readOnly: null,
 };

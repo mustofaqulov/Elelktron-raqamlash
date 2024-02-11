@@ -9,12 +9,14 @@ export const InputOrg = ({
   style,
   icon,
   type,
+  change,
 }) => {
   return (
     <>
       <label htmlFor={value}>{name}</label>
       <div className="search" style={style}>
         <input
+          onChange={change}
           readOnly={readOnly}
           type={type}
           id={value}
@@ -34,9 +36,11 @@ InputOrg.propTypes = {
   icon: PropTypes.node,
   readOnly: PropTypes.node,
   type: PropTypes.string,
+  change: PropTypes.func,
 };
 
 InputOrg.defaultProps = {
+  change: () => {},
   value: "",
   placeholder: "",
   name: "",

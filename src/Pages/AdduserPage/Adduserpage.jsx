@@ -36,7 +36,6 @@ export function AdduserPage() {
           >
             <img src={MapImg} alt="" />
           </Link>
-          {/* <MapImg /> */}
         </div>
       </div>
     </div>

@@ -29,26 +29,48 @@
       width: 100%;
       max-width: 446px;
       margin: 0 auto;
-      .login {
-        margin: 24px 0px;
-      }
-      .show-content {
+      form {
+        margin-top: 22px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        // margin-top: 5px;
-        // padding-top: 11px;
-        // padding-left: 15px;
-        height: 48px;
-        width: 60px;
-        position: relative;
-        background-color: white;
-        left: 85%;
-        top: -49px;
-        .show {
-          height: 24px;
-          display: block;
-          cursor: pointer;
+        flex-direction: column;
+        label {
+          font-size: 14px;
+        }
+        .login {
+          outline: none;
+          border: 1px solid rgba(65, 72, 91, 1);
+          margin-bottom: 22px;
+          padding: 15px 15px;
+          border-radius: 8px;
+          font-size: 16px;
+          margin-top: 12px;
+        }
+        .show-inp {
+          overflow: hidden;
+          border: 1px solid rgba(65, 72, 91, 1);
+          align-items: center;
+          display: flex;
+          border-radius: 8px;
+          .parol {
+            border: none;
+            width: 100%;
+            outline: none;
+            padding: 15px 15px;
+            font-size: 16px;
+          }
+          .show-click {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            width: 60px;
+          }
+        }
+        smal {
+          margin-top: 12px;
+          text-align: center;
+          color: red;
         }
       }
     }

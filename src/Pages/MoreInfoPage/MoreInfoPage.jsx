@@ -1,6 +1,7 @@
 import { Information } from "../../components/Information/Information";
 import EditIcon from "../../assets/icon/edit.svg?react";
 import TrashIcon from "../../assets/icon/trash.svg?react";
+import BtnMap from "../../assets/icon/blue.map.svg?react";
 import { Button } from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import { Modal } from "../../components/Modals/Modal";
@@ -53,6 +54,13 @@ export function MoreInfoPage() {
               icons={<TrashIcon />}
             />
           </div>
+        }
+        map={
+          <Button
+            btnClass={"secondary"}
+            text={"Kordinatani ko'rish"}
+            icons={<BtnMap />}
+          />
         }
       />
     </div>

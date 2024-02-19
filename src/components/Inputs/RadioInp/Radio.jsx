@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import "./Radio.scss";
 
-export const Radio = ({ value, name }) => {
+export const RadioInp = ({ value, name }) => {
   return (
     <>
       <div className="radio-container">
@@ -27,12 +27,12 @@ export const Radio = ({ value, name }) => {
   );
 };
 
-Radio.propTypes = {
+RadioInp.propTypes = {
   value: PropTypes.string,
   name: PropTypes.string,
 };
 
-Radio.defaultProps = {
+RadioInp.defaultProps = {
   value: "",
   name: "",
 };

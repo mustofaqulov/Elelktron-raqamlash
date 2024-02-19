@@ -1,15 +1,28 @@
 import { useState } from "react";
+import AuthService from "../../services/AuthService";
+import { useNavigate } from "react-router-dom";
 import GerbIcon from "../../assets/icon/gerb.svg?react";
 import EyeIcon from "../../assets/icon/eye.svg?react";
+import Edit from "../../assets/icon/not-eye.svg?react";
 import { Button } from "../../components/Button/Button";
-import { InputOrg } from "../../components/Inputs/InputOrg/InputOrg";
-import { NavLink } from "react-router-dom";
 import "./LoginPage.scss";
-
 export function LoginPage() {
-  const [show, setShow] = useState(false);
-  const handleshow = () => {
-    setShow(!show);
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMassege] = useState("");
+  const [visible, setVisible] = useState(true);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    AuthService.login(email, password).then((data) => {
+      if (data) {
+        navigate("/search");
+      } else {
+        setErrorMassege("Login yoki parol xato kiritildi");
+      }
+    });
   };
   return (
     <>
@@ -18,19 +31,41 @@ export function LoginPage() {
           <div className="login-page-img">
             <GerbIcon />
           </div>
-          <h1>Elektron raqamlashtirish portaliga hush kelibsiz!</h1>
+          <h1>Elektron raqamlashtirish portaliga xush kelibsiz!</h1>
           <p>Hisob raqamga kirish</p>
           <div className="registration">
-            <div className="login">
-              <InputOrg type={"text"} name={"Login"} />
-            </div>
-            <InputOrg type={show ? "text" : "password"} name={"Parol"} />
-            <div className="show-content">
-              <label className="show">{<EyeIcon onClick={handleshow} />}</label>
-            </div>
-            <NavLink to={"/search"}>
-              <Button btnClass="primary" text={"Kirish"} />
-            </NavLink>
+            <form action="" onSubmit={handleSubmit}>
+              <label htmlFor="">Login</label>
+              <input
+                className="login"
+                type="text"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+              />
+
+              <label htmlFor="">Parol</label>
+              <div className="show-inp">
+                <input
+                  className="parol"
+                  type={visible ? "text" : "password"}
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                  id="password"
+                />
+                <div
+                  className="show-click"
+                  onClick={() => setVisible(!visible)}
+                >
+                  {visible ? <EyeIcon /> : <Edit />}
+                </div>
+              </div>
+              {errorMessage && <smal>{errorMessage}</smal>}
+              <Button type="submit" btnClass="primary" text={"Kirish"} />
+            </form>
           </div>
         </div>
       </div>

@@ -1,10 +1,12 @@
 import { Header } from "../Header/Header";
 import PropTypes from "prop-types";
 import { InputOrg } from "../Inputs/InputOrg/InputOrg";
+import { RadioInp } from "../Inputs/RadioInp/Radio";
+import { Button } from "../Button/Button";
 
 import "./information.scss";
 
-export function Information({ add, btn, btnError, main, back, time }) {
+export function Information({ add, btn, btnError, main, back, time, map }) {
   const Infodata = [
     {
       name: "F.I.Sh",
@@ -79,7 +81,7 @@ export function Information({ add, btn, btnError, main, back, time }) {
       id: 4,
     },
     {
-      name: "Uy manzili",
+      name: "Uy koordinatalari",
       placeholder: "",
       type: "text",
       Only: add,
@@ -97,7 +99,6 @@ export function Information({ add, btn, btnError, main, back, time }) {
               <p>{time}</p>
             </div>
             {back}
-            {/* <Button btnClass={"border"} text={"Ortga"} icons={<ArrowIcon />} /> */}
           </div>
           <div className="wrapper">
             <div className="info-content">
@@ -129,6 +130,8 @@ export function Information({ add, btn, btnError, main, back, time }) {
                   </>
                 );
               })}
+              <label htmlFor="">kordinata</label>
+              <RadioInp />
             </div>
           </div>
           <div className="sort">
@@ -145,13 +148,17 @@ Information.defaultProps = {
   btn: null,
   btnError: null,
   main: null,
+  time: null,
   back: null,
+  map: null,
 };
 
 Information.propTypes = {
   add: PropTypes.bool,
   btn: PropTypes.object,
   btnError: PropTypes.bool,
+  time: PropTypes.bool,
   main: PropTypes.string,
   back: PropTypes.node,
+  map: PropTypes.node,
 };

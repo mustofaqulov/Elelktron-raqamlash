@@ -1,20 +1,32 @@
-label span {
-  color: #3570a4;
-}
-
-.container {
+.radio-container {
+  width: 100%;
+  max-width: 202px;
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
   color: white;
   user-select: none;
 
   .kadastir {
+    width: 100px;
+    height: 50px;
     display: flex;
     align-items: center;
     gap: 5px;
+    border: 1px solid #dbdfea;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  .radio {
+    display: flex;
+    align-items: center;
+    gap: 7px;
   }
 
   label {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -29,30 +41,25 @@ label span {
   }
 
   label span {
-
-    width: 15px;
-    height: 15px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-    border: 2px solid #3570a4;
+    background: transparent;
     position: relative;
-    display: inline-block;
-    transition: all 0.3s ease;
+    border: 2px solid #dbdfea;
 
     &::after {
       content: "";
-      width: 8.5px;
-      height: 8.5px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      width: 8px;
+      height: 8px;
       transform: scale(0);
       border-radius: 50%;
-      background-color: #759dc0;
-      transition: all 0.3s ease-in-out;
-      display: block;
+      background-color: #ffffff;
     }
-    
   }
 
   input[type="radio"] {
@@ -60,8 +67,10 @@ label span {
   }
 
   input[type="radio"]:checked ~ span {
+    border: none;
+    background: var(--color-blue);
     &::after {
-      transform: translate(-50%, -50%) scale(1);
+      transform: scale(1);
     }
   }
 }

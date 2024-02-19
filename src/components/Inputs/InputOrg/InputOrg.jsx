@@ -36,7 +36,6 @@ InputOrg.propTypes = {
   icon: PropTypes.node,
   readOnly: PropTypes.node,
   type: PropTypes.string,
-  change: PropTypes.string,
 };
 
 InputOrg.defaultProps = {

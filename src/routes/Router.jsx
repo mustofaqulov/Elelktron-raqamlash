@@ -1,6 +1,6 @@
+// import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { routePaths } from "../constants/routers";
-
 import {
   AdduserPage,
   EdituserPage,
@@ -11,6 +11,7 @@ import {
 
 export function Router() {
   const { LOGIN, ADDUSER, EDITUSER, MOREINFO, SEARCH } = routePaths;
+
   return (
     <Routes>
       <Route path={LOGIN} element={<LoginPage />} />
@@ -18,7 +19,7 @@ export function Router() {
       <Route path={EDITUSER} element={<EdituserPage />} />
       <Route path={MOREINFO} element={<MoreInfoPage />} />
       <Route path={SEARCH} element={<SearchPage />} />
-      <Route path="/login" element={<LoginPage />}></Route>
+      <Route path="/" element={<LoginPage />} />
     </Routes>
   );
 }

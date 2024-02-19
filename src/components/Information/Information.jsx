@@ -1,9 +1,12 @@
 import { Header } from "../Header/Header";
 import PropTypes from "prop-types";
 import { InputOrg } from "../Inputs/InputOrg/InputOrg";
+import { RadioInp } from "../Inputs/RadioInp/Radio";
+import { Button } from "../Button/Button";
+
 import "./information.scss";
 
-export function Information({ add, btn, btnError, main, back, time }) {
+export function Information({ add, btn, btnError, main, back, time, map }) {
   const Infodata = [
     {
       name: "F.I.Sh",
@@ -34,6 +37,13 @@ export function Information({ add, btn, btnError, main, back, time }) {
       id: 4,
     },
     {
+      name: "Yashash joyi",
+      type: "text",
+      placeholder: "",
+      Only: add,
+      id: 5,
+    },
+    {
       name: "Xonodon kodi",
       type: "text",
       placeholder: "AA 85040703",
@@ -43,36 +53,36 @@ export function Information({ add, btn, btnError, main, back, time }) {
   ];
   const data = [
     {
-      name: "Telefon raqami",
+      name: "Uy raqami",
       type: "number",
-      placeholder: "+998 99 999 99 99",
+      placeholder: "",
       Only: add,
       id: 1,
     },
     {
-      name: "Chet davlatda",
-      placeholder: 0,
+      name: "Telefon raqami",
+      placeholder: +998,
       type: "number",
       Only: add,
       id: 2,
     },
     {
-      name: "Uy manzili",
-      placeholder: "https/...",
+      name: "Oila soni",
+      placeholder: "",
       Only: add,
-      type: "text",
+      type: "number",
       id: 3,
     },
     {
-      name: "Uy raqami",
-      placeholder: "12",
+      name: "Chet davlatda",
+      placeholder: "",
       type: "number",
       Only: add,
       id: 4,
     },
     {
-      name: "Xonodon kodi",
-      placeholder: "249 45454545",
+      name: "Uy koordinatalari",
+      placeholder: "",
       type: "text",
       Only: add,
       id: 5,
@@ -89,7 +99,6 @@ export function Information({ add, btn, btnError, main, back, time }) {
               <p>{time}</p>
             </div>
             {back}
-            {/* <Button btnClass={"border"} text={"Ortga"} icons={<ArrowIcon />} /> */}
           </div>
           <div className="wrapper">
             <div className="info-content">
@@ -121,6 +130,8 @@ export function Information({ add, btn, btnError, main, back, time }) {
                   </>
                 );
               })}
+              <label htmlFor="">kordinata</label>
+              <RadioInp />
             </div>
           </div>
           <div className="sort">
@@ -137,13 +148,17 @@ Information.defaultProps = {
   btn: null,
   btnError: null,
   main: null,
+  time: null,
   back: null,
+  map: null,
 };
 
 Information.propTypes = {
   add: PropTypes.bool,
   btn: PropTypes.object,
   btnError: PropTypes.bool,
+  time: PropTypes.bool,
   main: PropTypes.string,
   back: PropTypes.node,
+  map: PropTypes.node,
 };

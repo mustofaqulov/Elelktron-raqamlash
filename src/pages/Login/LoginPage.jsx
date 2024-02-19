@@ -3,9 +3,10 @@ import AuthService from "../../services/AuthService";
 import { useNavigate } from "react-router-dom";
 import GerbIcon from "../../assets/icon/gerb.svg?react";
 import EyeIcon from "../../assets/icon/eye.svg?react";
-import Edit from "../../assets/icon/not-eye.svg?react";
+import HideIcon from "../../assets/icon/not-eye.svg?react";
 import { Button } from "../../components/Button/Button";
 import "./LoginPage.scss";
+import { data } from "../../JSON/data";
 export function LoginPage() {
   const navigate = useNavigate();
 
@@ -44,12 +45,14 @@ export function LoginPage() {
                   setEmail(e.target.value);
                 }}
               />
-
               <label htmlFor="">Parol</label>
-              <div className="show-inp">
+              <div
+                className="show-inp"
+                style={!data ? { border: "1px solid red" } : null}
+              >
                 <input
                   className="parol"
-                  type={visible ? "text" : "password"}
+                  type={visible ? "password" : "text"}
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
@@ -60,7 +63,7 @@ export function LoginPage() {
                   className="show-click"
                   onClick={() => setVisible(!visible)}
                 >
-                  {visible ? <EyeIcon /> : <Edit />}
+                  {visible ? <HideIcon /> : <EyeIcon />}
                 </div>
               </div>
               {errorMessage && <smal>{errorMessage}</smal>}

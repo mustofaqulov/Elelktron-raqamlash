@@ -3,7 +3,7 @@ import "./inputOrg.scss";
 
 export const InputOrg = ({
   readOnly,
-  value,
+  forHtml,
   placeholder,
   name,
   style,
@@ -13,13 +13,13 @@ export const InputOrg = ({
 }) => {
   return (
     <>
-      <label htmlFor={value}>{name}</label>
+      <label htmlFor={forHtml}>{name}</label>
       <div className="search" style={style}>
         <input
           onChange={change}
           readOnly={readOnly}
           type={type}
-          id={value}
+          id={forHtml}
           placeholder={placeholder}
         />
         {icon}
@@ -29,7 +29,7 @@ export const InputOrg = ({
 };
 
 InputOrg.propTypes = {
-  value: PropTypes.string,
+  forHtml: PropTypes.string,
   name: PropTypes.string,
   placeholder: PropTypes.string,
   style: PropTypes.object,
@@ -41,7 +41,7 @@ InputOrg.propTypes = {
 
 InputOrg.defaultProps = {
   change: () => {},
-  value: "",
+  forHtml: "",
   placeholder: "",
   name: "",
   type: "",

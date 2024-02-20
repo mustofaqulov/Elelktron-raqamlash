@@ -4,34 +4,34 @@
   display: flex;
   // justify-content: space-around;
   flex-direction: column;
-  color: white;
-  font-size: 24px;
-  background-color: rgb(66, 95, 66);
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 600;
+  background-color: rgb(255, 255, 255);
   .regions,
   .districts,
   .villages {
     width: 100%;
     max-width: 1211px;
-    padding: 10px;
   }
   .search {
+    margin-bottom: 15px;
     width: 100%;
     max-width: 1211px;
     border-radius: 10px;
-    margin-bottom: 30px;
     border: 1px solid #cccccc;
-    padding: 10px;
+    padding: 13px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 15px;
     input {
-      color: white;
+      color: rgb(0, 0, 0);
       outline: none;
       background-color: transparent;
       border: 0;
       flex-grow: 1;
-      font-size: 20px;
+      font-weight: 600;
+      font-size: 16px;
     }
   }
   label span {
@@ -46,7 +46,7 @@
     user-select: none;
     position: absolute;
     margin: 0;
-    background: rgb(69, 64, 64);
+    background: rgb(255, 255, 255);
     padding: 10px;
     border-radius: 10px;
     display: flex;
@@ -55,11 +55,13 @@
     li {
       cursor: pointer;
       padding: 5px;
-      border: 1px solid rgb(7, 255, 7);
+      border: 1px solid #cccccc;
       border-radius: 10px;
-      &:hover {
-        background: rgb(77, 121, 85);
-      }
+      padding: 10px;
+    }
+    li:hover {
+      background: #2c9cf2;
+      color: white;
     }
   }
 }

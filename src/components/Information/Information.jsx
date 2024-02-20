@@ -2,11 +2,20 @@ import { Header } from "../Header/Header";
 import PropTypes from "prop-types";
 import { InputOrg } from "../Inputs/InputOrg/InputOrg";
 import { RadioInp } from "../Inputs/RadioInp/Radio";
-import { Button } from "../Button/Button";
-
+// import { Button } from "../Button/Button";
 import "./information.scss";
+import { Regions } from "../Inputs/regions";
 
-export function Information({ add, btn, btnError, main, back, time, map }) {
+export function Information({
+  add,
+  btn,
+  btnError,
+  main,
+  back,
+  time,
+  map,
+  region,
+}) {
   const Infodata = [
     {
       name: "F.I.Sh",
@@ -15,27 +24,27 @@ export function Information({ add, btn, btnError, main, back, time, map }) {
       type: "text",
       id: 1,
     },
-    {
-      name: "Viloyat",
-      placeholder: "Qashqadaryo",
-      Only: add,
-      type: "text",
-      id: 2,
-    },
-    {
-      name: "Tuman",
-      placeholder: "Qarshi",
-      type: "text",
-      Only: add,
-      id: 3,
-    },
-    {
-      name: "Mahalla",
-      type: "text",
-      placeholder: "Qarshi",
-      Only: add,
-      id: 4,
-    },
+    // {
+    //   name: "Viloyat",
+    //   placeholder: "Qashqadaryo",
+    //   Only: add,
+    //   type: "text",
+    //   id: 2,
+    // },
+    // {
+    //   name: "Tuman",
+    //   placeholder: "Qarshi",
+    //   type: "text",
+    //   Only: add,
+    //   id: 3,
+    // },
+    // {
+    //   name: "Mahalla",
+    //   type: "text",
+    //   placeholder: "Qarshi",
+    //   Only: add,
+    //   id: 4,
+    // },
     {
       name: "Yashash joyi",
       type: "text",
@@ -115,6 +124,7 @@ export function Information({ add, btn, btnError, main, back, time, map }) {
                   </>
                 );
               })}
+              <Regions />
             </div>
             <div className="info-content">
               {data.map(({ Only, id, name, type }) => {

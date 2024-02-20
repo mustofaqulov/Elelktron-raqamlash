@@ -7,10 +7,10 @@ export function Layout({ children }) {
 
   useEffect(() => {
     if (!localStorage.getItem("accesstoken")) {
-      navigate("/login");
+      navigate("/");
     }
-  }),
-    [];
+  }, []);
+  
   return (
     <>
       <main className="main-content">{children}</main>

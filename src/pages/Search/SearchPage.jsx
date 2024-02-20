@@ -6,7 +6,6 @@ import { Button } from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import { InputOrg } from "../../components/Inputs/InputOrg/InputOrg";
 import { data } from "../../JSON/data";
-
 import Plus from "../../assets/icon/add.svg?react";
 import Search from "../../assets/icon/search.svg?react";
 
@@ -30,6 +29,16 @@ export function SearchPage() {
   let handleChange = (e, p) => {
     setPage(p);
   };
+
+  let handleClick = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const filteredData = data.filter((item) => {
+    return search.toLowerCase() === ""
+      ? null
+      : item.id.toLowerCase().includes(search);
+  });
 
   return (
     <>

@@ -22,21 +22,19 @@ export function AdduserPage() {
           </Link>
         }
       />
-      <div className="container">
-        <div className="map-location">
-          <div className="map-title">
-            <MapIcon />
-            <p>Xaritadagi joylashuvi</p>
-          </div>
-          <Link
-            target="_blank"
-            to={
-              "https://www.google.com/maps/search/O'zbekiston/@38.7849318,65.4703571,935487m/data=!3m1!1e3?entry=ttu"
-            }
-          >
-            <img src={MapImg} alt="" />
-          </Link>
+      <div className="map-location">
+        <div className="map-title">
+          <MapIcon />
+          <p>Xaritadagi joylashuvi</p>
         </div>
+        <Link
+          target="_blank"
+          to={
+            "https://www.google.com/maps/search/O'zbekiston/@38.7849318,65.4703571,935487m/data=!3m1!1e3?entry=ttu"
+          }
+        >
+          <img src={MapImg} alt="" />
+        </Link>
       </div>
     </div>
   );

@@ -45,7 +45,7 @@ export const Regions = () => {
       <div className="registration">
         <div className="regions">
           <label htmlFor="">
-            Viloyatlar<span>*</span>
+            Viloyatlar
           </label>
           <Dropdown
             data={RegionsJson}
@@ -56,7 +56,7 @@ export const Regions = () => {
         </div>
         <div className="districts">
           <label htmlFor="">
-            Tuman<span>*</span>
+            Tuman
           </label>
           <Dropdown
             data={districts}
@@ -67,7 +67,7 @@ export const Regions = () => {
         </div>
         <div className="villages">
           <label htmlFor="">
-            Mahalla<span>*</span>
+            Mahalla
           </label>
           <Dropdown
             data={villages}

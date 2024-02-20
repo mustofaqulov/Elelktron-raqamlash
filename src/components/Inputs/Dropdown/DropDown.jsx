@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { PropTypes } from "prop-types";
-import ArrowDown from "../../../assets/icons/search.svg?react";
+import ArrowDown from "../../../assets/icon/search.svg";
 
 export const Dropdown = ({ data, value, setValue, placeholder }) => {
   const [modal, setModal] = useState(false);

@@ -1,9 +1,17 @@
 import { useState } from "react";
 import { PropTypes } from "prop-types";
 import ArrowDown from "../../../assets/icon/search.svg?react";
+import { useForm } from "react-hook-form";
 
-export const Dropdown = ({ data, value, setValue, placeholder }) => {
+export const Dropdown = ({
+  data,
+  value,
+  setValue,
+  placeholder,
+  registerName,
+}) => {
   const [modal, setModal] = useState(false);
+  const { register } = useForm();
 
   return (
     <>
@@ -16,6 +24,7 @@ export const Dropdown = ({ data, value, setValue, placeholder }) => {
           onChange={(e) => {
             setValue(e.target.value);
           }}
+          {...register("hgg")}
         />
         <img
           onClick={() => setModal(!modal)}
@@ -46,6 +55,7 @@ Dropdown.propTypes = {
   value: PropTypes.string,
   placeholder: PropTypes.string,
   setValue: PropTypes.func,
+  registerName: PropTypes.string,
 };
 
 Dropdown.defaultProps = {
@@ -53,4 +63,5 @@ Dropdown.defaultProps = {
   value: "",
   setValue: () => {},
   placeholder: "",
+  registerName: "",
 };

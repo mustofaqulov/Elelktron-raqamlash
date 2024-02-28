@@ -1,12 +1,11 @@
 .registration {
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   // justify-content: space-around;
   flex-direction: column;
   color: rgb(0, 0, 0);
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 24px;
   background-color: rgb(255, 255, 255);
   .regions,
   .districts,
@@ -15,12 +14,11 @@
     max-width: 1211px;
   }
   .search {
-    margin-bottom: 15px;
     width: 100%;
     max-width: 1211px;
     border-radius: 10px;
     border: 1px solid #cccccc;
-    padding: 13px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,38 +28,41 @@
       background-color: transparent;
       border: 0;
       flex-grow: 1;
-      font-weight: 600;
       font-size: 16px;
+      font-weight: 200;
     }
-  }
-  label span {
-    color: #3570a4;
   }
   ul {
     width: 100%;
-    max-width: 1111px;
+    max-width: 500px;
     transition: 1s;
     list-style: none;
     padding: 0;
     user-select: none;
     position: absolute;
     margin: 0;
-    background: rgb(255, 255, 255);
+    background: rgb(69, 64, 64);
     padding: 10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    // backdrop-filter: blur(15px);
     gap: 30px;
+    // border: 1px solid rgb(121, 114, 114);
+
     li {
+      transition: 0.3s;
       cursor: pointer;
       padding: 5px;
-      border: 1px solid #cccccc;
+      border: 1px solid rgb(121, 114, 114);
+      color: rgb(0, 0, 0);
       border-radius: 10px;
-      padding: 10px;
-    }
-    li:hover {
-      background: #2c9cf2;
-      color: white;
+      &:hover {
+        border: 1px solid var(--color-blue);
+        color: white;
+        background: var(--color-blue);
+      }
     }
   }
 }

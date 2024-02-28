@@ -1,21 +1,16 @@
 import { Header } from "../Header/Header";
 import PropTypes from "prop-types";
-import { InputOrg } from "../Inputs/InputOrg/InputOrg";
+// import { InputOrg } from "../Inputs/InputOrg/InputOrg";
 import { RadioInp } from "../Inputs/RadioInp/Radio";
 // import { Button } from "../Button/Button";
 import "./information.scss";
+// import { Dropdown } from "../Inputs/Dropdown/DropDown";
 import { Regions } from "../Inputs/regions";
+import { useForm } from "react-hook-form";
+import { useState, useEffect } from "react";
+import { postFetch } from "../../services/post/post.fetch.js";
 
-export function Information({
-  add,
-  btn,
-  btnError,
-  main,
-  back,
-  time,
-  map,
-  region,
-}) {
+export function Information({ add, btn, btnError, main, back, time }) {
   const Infodata = [
     {
       name: "F.I.Sh",
@@ -23,6 +18,7 @@ export function Information({
       Only: add,
       type: "text",
       id: 1,
+      objKey: "fullName",
     },
     // {
     //   name: "Viloyat",
@@ -51,6 +47,7 @@ export function Information({
       placeholder: "",
       Only: add,
       id: 5,
+      objKey: "homeAddress",
     },
     {
       name: "Xonodon kodi",
@@ -58,6 +55,7 @@ export function Information({
       placeholder: "AA 85040703",
       Only: add,
       id: 5,
+      objKey: "homeCode",
     },
   ];
   const data = [
@@ -67,20 +65,23 @@ export function Information({
       placeholder: "",
       Only: add,
       id: 1,
+      objKey: "homeNumber",
     },
     {
       name: "Telefon raqami",
-      placeholder: +998,
+      placeholder: "+998",
       type: "number",
       Only: add,
       id: 2,
+      objKey: "phoneNumber",
     },
     {
       name: "Oila soni",
-      placeholder: "",
+      placeholder: "0",
       Only: add,
       type: "number",
       id: 3,
+      objKey: "numberOfFamilyMembers",
     },
     {
       name: "Chet davlatda",
@@ -88,6 +89,7 @@ export function Information({
       type: "number",
       Only: add,
       id: 4,
+      objKey: "theNumberOfHouseholdsInAForeignCountry",
     },
     {
       name: "Uy koordinatalari",
@@ -95,8 +97,20 @@ export function Information({
       type: "text",
       Only: add,
       id: 5,
+      objKey: "homeLocation",
     },
   ];
+  const { register, handleSubmit } = useForm();
+  const [formData, setFormData] = useState(null);
+  // console.dir(useForm());
+  console.log(formData);
+  useEffect(() => {
+    postFetch(formData);
+  }, [formData]);
+
+  const removePreverDefault = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <div className="container">
@@ -109,45 +123,72 @@ export function Information({
             </div>
             {back}
           </div>
-          <div className="wrapper">
+          <form
+            className="wrapper"
+            onSubmit={
+              (removePreverDefault,
+              handleSubmit((data) =>
+                setFormData(JSON.parse(JSON.stringify(data)))
+              ))
+            }
+          >
             <div className="info-content">
-              {Infodata.map(({ Only, id, name, type }) => {
+              {Infodata.map(({ name, type, objKey }) => {
                 return (
                   <>
-                    <InputOrg
+                    <label>{name}</label>
+                    <div className="search">
+                      <input
+                        type={type}
+                        // placeholder={placeholder}
+                        {...register(objKey)}
+                      />
+                    </div>
+                    {/* <InputOrg
                       key={id}
                       // placeholder={placeholder}
                       readOnly={Only}
                       name={name}
                       type={type}
-                    />
+                      objKey={objKey}
+                    /> */}
                   </>
                 );
               })}
               <Regions />
             </div>
             <div className="info-content">
-              {data.map(({ Only, id, name, type }) => {
+              {data.map(({ name, type, objKey }) => {
                 return (
                   <>
-                    <InputOrg
+                    <label>{name}</label>
+                    <div className="search">
+                      <input
+                        type={type}
+                        // placeholder={placeholder}
+                        {...register(objKey)}
+                      />
+                    </div>
+                    {/* <InputOrg
                       key={id}
                       // placeholder={placeholder}
                       readOnly={Only}
                       type={type}
                       name={name}
-                    />
+                      objKey={objKey}
+                    /> */}
                   </>
                 );
               })}
-              <label htmlFor="">kordinata</label>
+              <label htmlFor="">Kadastir</label>
               <RadioInp />
             </div>
-          </div>
-          <div className="sort">
-            {btn}
-            {btnError}
-          </div>
+            <div className="sort">
+              {/* <input type="submit" /> */}
+              {btn}
+              {btnError}
+            </div>
+          </form>
         </div>
       </div>
     </>

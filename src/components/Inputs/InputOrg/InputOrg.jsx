@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import "./inputOrg.scss";
-
+import { useForm } from "react-hook-form";
 export const InputOrg = ({
   readOnly,
   forHtml,
@@ -10,7 +10,10 @@ export const InputOrg = ({
   icon,
   type,
   change,
+  objKey,
 }) => {
+  // console.log(objKey);
+  const { register } = useForm();
   return (
     <>
       <label htmlFor={forHtml}>{name}</label>
@@ -21,6 +24,7 @@ export const InputOrg = ({
           type={type}
           id={forHtml}
           placeholder={placeholder}
+          {...register("name")}
         />
         {icon}
       </div>
@@ -37,6 +41,7 @@ InputOrg.propTypes = {
   readOnly: PropTypes.node,
   type: PropTypes.string,
   change: PropTypes.func,
+  objKey: PropTypes.string,
 };
 
 InputOrg.defaultProps = {
@@ -48,4 +53,5 @@ InputOrg.defaultProps = {
   style: {},
   icon: null,
   readOnly: null,
+  objKey: "",
 };

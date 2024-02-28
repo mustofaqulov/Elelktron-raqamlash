@@ -16,11 +16,7 @@ export function AdduserPage() {
         }
         main={"Fuqoro qo’shish"}
         add={false}
-        btn={
-          <Link to={"/search"}>
-            <Button btnClass={"secondary"} text={"Saqlash"} />
-          </Link>
-        }
+        btn={<Button btnClass={"secondary"} text={"Saqlash"} />}
       />
       <div className="map-location">
         <div className="map-title">

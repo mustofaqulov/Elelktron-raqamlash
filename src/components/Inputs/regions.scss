@@ -44,7 +44,7 @@
   }
   ul {
     width: 100%;
-    max-width: 500px;
+    max-width: 480px;
     transition: 1s;
     list-style: none;
     padding: 0;
@@ -55,8 +55,7 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    background-color: rgba(159, 159, 159, 0.114);
-    backdrop-filter: blur(3px);
+    background-color: rgb(159, 159, 159);
     gap: 30px;
     border: 1px solid rgb(121, 114, 114);
 
@@ -66,10 +65,10 @@
       padding: 10px;
       border-radius: 10px;
       color: black;
-      border: 1px solid #97a2c1;
+      border: 1px solid #3f3f3f;
       &:hover {
         border-color: transparent;
-        background-color: rgba(173, 173, 173, 0.228);
+        background-color: rgba(57, 57, 57, 0.228);
       }
     }
   }

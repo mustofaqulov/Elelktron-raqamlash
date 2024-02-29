@@ -44,36 +44,33 @@ export const Regions = () => {
     <>
       <div className="registration">
         <div className="regions">
-          <label htmlFor="">
-            Viloyatlar
-          </label>
+          <label htmlFor="">Viloyatlar</label>
           <Dropdown
             data={RegionsJson}
             placeholder="Viloyat"
             value={value}
             setValue={setValue}
+            registerName="region"
           />
         </div>
         <div className="districts">
-          <label htmlFor="">
-            Tuman
-          </label>
+          <label htmlFor="">Tuman</label>
           <Dropdown
             data={districts}
             placeholder="Tuman"
             value={value1}
             setValue={setValue1}
+            registerName="citizenDistrict"
           />
         </div>
         <div className="villages">
-          <label htmlFor="">
-            Mahalla
-          </label>
+          <label htmlFor="">Mahalla</label>
           <Dropdown
             data={villages}
             placeholder="Mahalla"
             value={value2}
             setValue={setValue2}
+            registerName="citizensNeighborhood"
           />
         </div>
       </div>

@@ -35,7 +35,7 @@ export function LoginPage() {
           </div>
           <h1>Elektron raqamlashtirish portaliga xush kelibsiz!</h1>
           <p>Hisob raqamga kirish</p>
-          <div className="registration">
+          <div className="sign-up">
             <form action="" onSubmit={handleSubmit}>
               <label style={errorMessage && { color: "red" }}>Login</label>
               <input

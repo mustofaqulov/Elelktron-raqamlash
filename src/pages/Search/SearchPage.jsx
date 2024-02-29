@@ -5,7 +5,7 @@ import { Header } from "../../components/Header/Header";
 import { Button } from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import { InputOrg } from "../../components/Inputs/InputOrg/InputOrg";
-import { data } from "../../JSON/data";
+import { data } from "../../utils/mocks/data";
 import Plus from "../../assets/icon/add.svg?react";
 import Search from "../../assets/icon/search.svg?react";
 
@@ -64,6 +64,7 @@ export function SearchPage() {
               style={{
                 border: " none",
                 background: "white",
+                padding: "15px",
                 // boxShadow: "0px 0px 40px 0.2px #43434331",
               }}
               placeholder={"Izlash"}

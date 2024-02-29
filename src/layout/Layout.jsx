@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
-export function Layout({ children }) {
+export function Layout() {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -10,10 +10,12 @@ export function Layout({ children }) {
       navigate("/");
     }
   }, []);
-  
+
   return (
     <>
-      <main className="main-content">{children}</main>
+      <main className="main-content">
+        <Outlet />
+      </main>
     </>
   );
 }

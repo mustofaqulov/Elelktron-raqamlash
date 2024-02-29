@@ -6,20 +6,21 @@ import {
   EdituserPage,
   MoreInfoPage,
   SearchPage,
-  LoginPage,
+  // LoginPage,
 } from "../pages";
+import { Layout } from "../layout/Layout";
 
 export function Router() {
-  const { LOGIN, ADDUSER, EDITUSER, MOREINFO, SEARCH } = routePaths;
+  const { ADDUSER, EDITUSER, MOREINFO, HOME } = routePaths;
 
   return (
     <Routes>
-      <Route path={LOGIN} element={<LoginPage />} />
-      <Route path={ADDUSER} element={<AdduserPage />} />
-      <Route path={EDITUSER} element={<EdituserPage />} />
-      <Route path={MOREINFO} element={<MoreInfoPage />} />
-      <Route path={SEARCH} element={<SearchPage />} />
-      <Route path="/" element={<LoginPage />} />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<SearchPage />} />
+        <Route path={HOME + ADDUSER} element={<AdduserPage />} />
+        <Route path={EDITUSER} element={<EdituserPage />} />
+        <Route path={MOREINFO} element={<MoreInfoPage />} />
+      </Route>
     </Routes>
   );
 }

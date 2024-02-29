@@ -6,13 +6,13 @@ import EyeIcon from "../../assets/icon/eye.svg?react";
 import HideIcon from "../../assets/icon/not-eye.svg?react";
 import { Button } from "../../components/Button/Button";
 import "./LoginPage.scss";
-import { data } from "../../JSON/data";
+import { data } from "../../utils/mocks/data";
 export function LoginPage() {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMassege] = useState("");
+  const [errorMessage, setErrorMassege] = useState(null);
   const [visible, setVisible] = useState(true);
 
   const handleSubmit = (e) => {
@@ -21,6 +21,7 @@ export function LoginPage() {
       if (data) {
         navigate("/search");
       } else {
+        setErrorMassege(true);
         setErrorMassege("Login yoki parol xato kiritildi");
       }
     });
@@ -36,7 +37,7 @@ export function LoginPage() {
           <p>Hisob raqamga kirish</p>
           <div className="sign-up">
             <form action="" onSubmit={handleSubmit}>
-              <label htmlFor="">Login</label>
+              <label style={errorMessage && { color: "red" }}>Login</label>
               <input
                 className="login"
                 type="text"
@@ -44,11 +45,12 @@ export function LoginPage() {
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
+                style={errorMessage && { borderColor: "red" }}
               />
-              <label htmlFor="">Parol</label>
+              <label style={errorMessage && { color: "red" }}>Parol</label>
               <div
                 className="show-inp"
-                style={!data ? { border: "1px solid red" } : null}
+                style={errorMessage && { border: "1px solid red" }}
               >
                 <input
                   className="parol"

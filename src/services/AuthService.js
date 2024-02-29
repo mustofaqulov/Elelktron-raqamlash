@@ -12,8 +12,7 @@ class AuthService {
 
       console.log(response.data);
 
-      localStorage.setItem("accessToken", "some");
-
+      console.log(localStorage.setItem("accessToken", "some"));
       return true;
     } catch (err) {
       return false;

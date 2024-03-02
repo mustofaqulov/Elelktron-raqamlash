@@ -10,9 +10,7 @@ export const InputOrg = ({
   icon,
   type,
   change,
-  objKey,
 }) => {
-  // console.log(objKey);
   const { register } = useForm();
   return (
     <>

@@ -1,67 +1,54 @@
 .registration {
   width: 100%;
-  // height: 100vh;
   display: flex;
-  // justify-content: space-around;
   flex-direction: column;
   color: rgb(0, 0, 0);
   font-size: 24px;
-  background-color: rgb(255, 255, 255);
-  .regions,
-  .districts,
-  .villages {
-    width: 100%;
-    max-width: 1211px;
-  }
+
   .search {
     width: 100%;
     max-width: 1211px;
     border-radius: 10px;
-    border: 1px solid #cccccc;
     padding: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    input {
-      color: rgb(0, 0, 0);
-      outline: none;
-      background-color: transparent;
-      border: 0;
-      flex-grow: 1;
-      font-size: 16px;
-      font-weight: 200;
-    }
+    cursor: pointer;
+    user-select: none;
+  }
+  .reg {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 143%;
+    color: var(--color-dark-black);
+    cursor: pointer;
   }
   ul {
-    width: 100%;
-    max-width: 480px;
+    width: 500px;
+    max-height: 224px;
     transition: 1s;
-    list-style: none;
-    padding: 0;
     user-select: none;
-    position: absolute;
-    margin: 0;
-    background: rgb(69, 64, 64);
-    padding: 10px;
-    border-radius: 10px;
+    border: 1px solid #dbdfea;
     display: flex;
     flex-direction: column;
-    background-color: rgb(159, 159, 159);
-    gap: 30px;
-    // border: 1px solid rgb(121, 114, 114);
+    overflow: auto;
+    border-radius: 0 0 4px 4px;
+    margin-top: -1px;
 
     li {
-      transition: 0.3s;
+      padding: 8px 16px;
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 143%;
+      color: var(--color-dark-black);
       cursor: pointer;
-      padding: 5px;
-      border: 1px solid rgb(121, 114, 114);
-      color: rgb(0, 0, 0);
-      border-radius: 10px;
-      color: black;
-      border: 1px solid #97a2c1;
+      list-style: none;
+      transition: 0.2s;
+
       &:hover {
-        border-color: transparent;
-        background-color: rgba(173, 173, 173, 0.228);
+        color: var(--color-blue);
       }
     }
   }

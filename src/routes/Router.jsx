@@ -4,20 +4,20 @@ import { routePaths } from "../constants/routers";
 import {
   AdduserPage,
   EdituserPage,
+  // LoginPage,
   MoreInfoPage,
   SearchPage,
-  // LoginPage,
 } from "../pages";
 import { Layout } from "../layout/Layout";
 
 export function Router() {
-  const { ADDUSER, EDITUSER, MOREINFO, HOME } = routePaths;
+  const { ADDUSER, EDITUSER, MOREINFO } = routePaths;
 
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<SearchPage />} />
-        <Route path={HOME + ADDUSER} element={<AdduserPage />} />
+        <Route path={ADDUSER} element={<AdduserPage />} />
         <Route path={EDITUSER} element={<EdituserPage />} />
         <Route path={MOREINFO} element={<MoreInfoPage />} />
       </Route>

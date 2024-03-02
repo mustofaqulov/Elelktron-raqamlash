@@ -6,7 +6,6 @@ import EyeIcon from "../../assets/icon/eye.svg?react";
 import HideIcon from "../../assets/icon/not-eye.svg?react";
 import { Button } from "../../components/Button/Button";
 import "./LoginPage.scss";
-import { data } from "../../utils/mocks/data";
 export function LoginPage() {
   const navigate = useNavigate();
 

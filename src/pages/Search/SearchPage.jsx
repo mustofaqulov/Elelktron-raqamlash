@@ -65,7 +65,6 @@ export function SearchPage() {
                 border: " none",
                 background: "white",
                 padding: "15px",
-                // boxShadow: "0px 0px 40px 0.2px #43434331",
               }}
               placeholder={"Izlash"}
               icon={<Search />}

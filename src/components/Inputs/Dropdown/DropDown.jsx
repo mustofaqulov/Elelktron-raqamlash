@@ -1,37 +1,23 @@
 import { useState } from "react";
 import { PropTypes } from "prop-types";
-import ArrowDown from "../../../assets/icon/search.svg?react";
 import { useForm } from "react-hook-form";
 
-export const Dropdown = ({
-  data,
-  value,
-  setValue,
-  placeholder,
-  registerName,
-}) => {
+export const Dropdown = ({ data, value, setValue }) => {
   const [modal, setModal] = useState(false);
   const { register } = useForm();
 
   return (
     <>
       <div className="search" onClick={() => setModal(!modal)}>
-        <input
-          type="text"
-          value={value}
-          id={value}
-          placeholder={placeholder}
+        <div
+          className="reg"
           onChange={(e) => {
             setValue(e.target.value);
           }}
           {...register("hgg")}
-        />
-        <img
-          onClick={() => setModal(!modal)}
-          style={{ cursor: "pointer" }}
-          src={ArrowDown}
-          alt=""
-        />
+        >
+          {value}
+        </div>
       </div>
       {modal && data && (
         <ul name={value} value={value} onClick={() => setModal(!modal)}>

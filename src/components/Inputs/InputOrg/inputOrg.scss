@@ -34,3 +34,7 @@ label {
   line-height: 140%;
   color: var(--color-dark-gray);
 }
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}

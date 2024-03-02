@@ -34,9 +34,7 @@ export function EdituserPage() {
         add={false}
         btn={
           <div onClick={() => setOpen(true)}>
-            {/* <Link to={"/moreinfo"}> */}
             <Button btnClass={"secondary"} text={"Saqlash"} />
-            {/* </Link> */}
           </div>
         }
       />

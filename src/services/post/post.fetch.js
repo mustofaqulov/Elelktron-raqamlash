@@ -5,7 +5,6 @@ export async function postFetch(formData) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      //  "application/json"
     },
     body: formData,
   });

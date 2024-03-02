@@ -14,9 +14,9 @@ export function MoreInfoPage() {
     <div>
       <Modal
         title={"ID O’chishir"}
-        text={"Siz id '199 4545454'  id o'chirmoqchisiz.Ishonchingiz komilmi?"}
+        text={"Siz id '199 4545454' ni o'chirmoqchisiz.Ishonchingiz komilmi?"}
         open={isOpen}
-        onClose={() => setOpen(false)}
+        onClose={() => setOpen(!isOpen)}
         change={
           <div>
             <Button btnClass={"gray"} text={"Yo'q, Saqlash."} />
